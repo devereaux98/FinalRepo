@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class AlphaScript : MonoBehaviour {
+public class TextBoxAlpha : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () 

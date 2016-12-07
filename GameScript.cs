@@ -1,14 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameScript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () 
+public class GameScript : MonoBehaviour 
+{
+	public static string Enemy = ("Spider");
+    // Use this for initialization
+    void Start () 
     {
-        String Enemy = ("Spider");
+        bool Walk = true;
 	}
-	
 	// Update is called once per frame
 	void Update () 
     {

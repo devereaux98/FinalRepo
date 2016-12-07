@@ -2,14 +2,18 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Display : MonoBehaviour {
-
+public class Display : MonoBehaviour 
+{
 	// Use this for initialization
 	Text instruction;
 	void Start () 
 	{
+		GameObject DisplayText = GameObject.Find("DisplayText");
+		Color tmp = DisplayText.GetComponent<SpriteRenderer>().color;
+ 		tmp.a = 0f;
+ 		DisplayText.GetComponent<SpriteRenderer>().color = tmp;
 		instruction = GetComponent<Text>();
-		instruction.text = ("A ghost appeared!");
+		instruction.text = ("A " + GameScript.Enemy + " appeared!");
 	}
 	
 	// Update is called once per frame
