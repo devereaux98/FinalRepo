@@ -11,9 +11,9 @@ public class Display : MonoBehaviour
 		while (GameScript.Walk = true)
 		{
 			GameObject DisplayText = GameObject.Find("DisplayText");
-			Color tmp = DisplayText.GetComponent<SpriteRenderer>().color;
+			Color tmp = DisplayText.GetComponent<Text>().color;
  			tmp.a = 0f;
-			DisplayText.GetComponent<SpriteRenderer>().color = tmp;
+			DisplayText.GetComponent<Text>().color = tmp;
 		}
 		instruction = GetComponent<Text>();
 		instruction.text = ("A " + GameScript.Enemy + " appeared!");

@@ -19,7 +19,7 @@ public class GameScript : MonoBehaviour
         while (GameScript.Walk = false)
         {
             
-            GetComponent<Animation>().Stop(Player10);
+            //GetComponent<Animation>().Stop(Player10);
         }
 	}
 }
