@@ -5,18 +5,22 @@ public class GameScript : MonoBehaviour
 {
 	public static string Enemy;
     public static bool Walk;
+    
     // Use this for initialization
     void Start () 
     {
         string Enemy = ("Spider");
-        bool Walk = true;
+        bool Walk = false;
+        GameObject Player10 = GameObject.Find("Player10");
+        Animation animation = GetComponent<Animation>().Play();
 	}
 	// Update is called once per frame
 	void Update () 
     {
-        while (Walk = true)
+        while (GameScript.Walk = true)
         {
-            animation.wrapMode = WrapMode.Loop;
+            
+            animation.Play(Player10);
         }
 	}
 }
