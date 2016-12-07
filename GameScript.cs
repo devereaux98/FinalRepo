@@ -12,15 +12,14 @@ public class GameScript : MonoBehaviour
         string Enemy = ("Spider");
         bool Walk = false;
         GameObject Player10 = GameObject.Find("Player10");
-        Animation animation = GetComponent<Animation>().Play();
 	}
 	// Update is called once per frame
 	void Update () 
     {
-        while (GameScript.Walk = true)
+        while (GameScript.Walk = false)
         {
             
-            animation.Play(Player10);
+            GetComponent<Animation>().Stop(Player10);
         }
 	}
 }
