@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameScript : MonoBehaviour 
 {
-	public static string Enemy;
+	public static string Enemy = ("Spider");
     public static bool Walk;
     
     // Use this for initialization
@@ -16,10 +16,9 @@ public class GameScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        while (GameScript.Walk = false)
+        while (Walk = false)
         {
-            
-            //GetComponent<Animation>().Stop(Player10);
+             gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Dungeon1.png");
         }
 	}
 }
