@@ -10,7 +10,7 @@ public class waterEnemy
     int power = 9;
     String enemyType = ("Water");
 
-    int waterAttack (power)
+    int waterAttack (int power)
     {
         Player.armor -= power;
         if (Player.armor == 0)

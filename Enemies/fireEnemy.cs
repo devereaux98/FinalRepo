@@ -10,7 +10,7 @@ public class fireEnemy
     
     String enemyType = ("Fire");
 
-    int FireAttack (power)
+    int FireAttack (int power)
     {
         Player.armor -= power;
         if (Player.armor == 0)
