@@ -10,7 +10,7 @@ public class grassEnemy
     int power = 10;
     String enemyType = ("Grass");
 
-    int grassAttack (int power)
+    public int grassAttack (int power)
     {
         Player.armor -= power;
         if (Player.armor == 0)
@@ -19,7 +19,7 @@ public class grassEnemy
         }
     }
 
-    int grassTakeDamage ()
+    public int grassTakeDamage ()
     {
         this.health -= 10;
     }
