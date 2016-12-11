@@ -35,6 +35,15 @@ public class GameScript
     }
     void instruction ()
     {
-        String instruction = Console.ReadLine(" 'Would you like to know how to play?' ");
+        String instructions = Console.ReadLine(" 'Would you like to know how to play?' ");
+        if (instructions == 'yes' || 'Yes' || 'YES')
+        {
+            instructionFunction();
+        }
+        else
+        {
+            Console.WriteLine(" 'Very well.  Good luck on your adventure, " + Player.name + "!' ");
+        }
     }
+    instruction();
 }
