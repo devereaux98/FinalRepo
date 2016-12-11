@@ -1,0 +1,26 @@
+//Devereaux Legakis
+//Anthony Romrell
+//C-Sharp Final
+
+using System;
+
+public class Player
+{
+    String name;
+    int health = 100;
+    int armor = 100;
+    int magic = 50;
+    String[] magicType = ["fire", "water", "grass"];
+    String[] items = ["potion", "elixir", "gold", "armor"];
+    int potionCount = 1;
+    int elixirCount = 1;
+    int goldCOunt = 100;
+    int subtractHealth (power)
+    {
+        this.health -= power;
+    }
+    int subtractArmor (power)
+    {
+        this.armor -= power;
+    }
+}
