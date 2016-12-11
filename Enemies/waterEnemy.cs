@@ -4,18 +4,23 @@
 
 using System;
 
-public class fireEnemy
+public class waterEnemy
 {
     int health = 50;
-    int power = 8;
-    String enemyType = ("Fire");
+    int power = 9;
+    String enemyType = ("Water");
 
-    int FireAttack (power)
+    int waterAttack (power)
     {
         Player.armor -= power;
         if (Player.armor == 0)
         {
             Player.health -= power;
         }
+    }
+
+    int waterTakeDamage ()
+    {
+        this.health -= 10;
     }
 }
