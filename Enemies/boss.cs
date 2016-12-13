@@ -15,4 +15,7 @@ public class boss
     {
 
     }
+    List<object> bossStats = new List<object>();
+    bossStats.add(boss.health);
+    bossStats.add(boss.power);
 }

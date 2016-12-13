@@ -27,4 +27,7 @@ public class grassEnemy
         this.health -= 10;
         return grassEnemy.health;
     }
+    List<string> grassStats = new List<string>();
+    grassStats.add(grassEnemy.health);
+    grassStats.add(grassEnemy.power);
 }

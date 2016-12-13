@@ -26,4 +26,7 @@ public class waterEnemy
         this.health -= 10;
         return waterEnemy.health;
     }
+    List<string> waterStats = new List<string>();
+    waterStats.add(waterEnemy.health);
+    waterStats.add(waterEnemy.power);
 }
