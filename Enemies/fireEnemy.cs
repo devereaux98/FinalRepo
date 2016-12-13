@@ -3,6 +3,7 @@
 //C-Sharp Final
 
 using System;
+using System.Collections.Generic;
 
 public class fireEnemy
 {
@@ -27,4 +28,7 @@ public class fireEnemy
         this.health -= 10;
         return fireEnemy.health;
     }
+    List<string> fireStats = new List<string>();
+    fireStats.add(fireEnemy.health);
+    fireStats.add(fireEnemy.power);
 }

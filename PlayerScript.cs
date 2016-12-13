@@ -3,6 +3,7 @@
 //C-Sharp Final
 
 using System;
+using System.Collections.Generic;
 
 public class Player
 {
@@ -15,12 +16,13 @@ public class Player
     int potionCount = 1;
     int elixirCount = 1;
     int goldCOunt = 100;
-    int subtractHealth (power)
-    {
-        this.health -= power;
-    }
     int subtractArmor (power)
     {
         this.armor -= power;
+        return Player.armor;
     }
+    List<string> playerStats = new List<string>();
+    playerStats.add(Player.health);
+    playerStats.add(Player.armor);
+    playerStats.add(Player.magic);
 }
