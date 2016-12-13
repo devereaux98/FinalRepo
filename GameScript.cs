@@ -11,7 +11,7 @@ public class GameScript
         System.Console.WriteLine(" Welcome stranger!  Our wonderful town of Codeville is being rampaged by corrupted and incorrect javascript files!  You must help us! ");
         Player.name = System.Console.ReadLine(" What is your name, stranger? ");
     }
-    GameScript.adventureStart();
+    adventureStart();
     void itemGet ()
     {
         System.Console.WriteLine(" Thank you for helping us, " + Player.name + ".  Here are some supplies to help you on your journey. ");
