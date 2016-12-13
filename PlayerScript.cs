@@ -25,4 +25,8 @@ public class Player
     playerStats.add(Player.health);
     playerStats.add(Player.armor);
     playerStats.add(Player.magic);
+    while (int health > 0)
+    {
+        GameScript.Game = true;
+    }
 }
