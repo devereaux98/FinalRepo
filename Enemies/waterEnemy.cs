@@ -16,11 +16,13 @@ public class waterEnemy
         if (Player.armor == 0)
         {
             Player.health -= power;
+            return Player.health;
         }
     }
 
     public int waterTakeDamage ()
     {
         this.health -= 10;
+        return waterEnemy.health;
     }
 }

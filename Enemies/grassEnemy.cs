@@ -16,11 +16,14 @@ public class grassEnemy
         if (Player.armor == 0)
         {
             Player.health -= power;
+            return Player.health;
         }
+        
     }
 
     public int grassTakeDamage ()
     {
         this.health -= 10;
+        return grassEnemy.health;
     }
 }
