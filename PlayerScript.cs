@@ -6,7 +6,7 @@ using System;
 
 public class Player
 {
-    String name;
+    public String name;
     int health = 100;
     int armor = 100;
     int magic = 50;

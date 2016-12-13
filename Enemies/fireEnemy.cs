@@ -7,6 +7,8 @@ using System;
 public class fireEnemy
 {
     int health = 50;
+
+    int power = 10;
     
     String enemyType = ("Fire");
 
