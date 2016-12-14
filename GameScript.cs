@@ -63,7 +63,7 @@ public class GameScript
                 instructionFunction();
                 break;
             default:
-                System.Console.WriteLine(" Very well.  Good luck on your adventure, " + Player.name + "! ");
+                System.Console.WriteLine(" Very well.  Good luck on your adventure, " + player1.name + "! ");
                 break;
         }
         

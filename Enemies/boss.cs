@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class boss
 {
+    public PlayerScript player1 = new PlayerScript();
     public boss ba = new boss();
     public int health = 200;
     public int power = 14;
@@ -14,7 +15,7 @@ public class boss
 
     public void bossAttack ()
     {
-        public PlayerScript player1 = new PlayerScript();
+        
         for (int i = 0; i < 5; i++)
         {
             while (i < 5)
@@ -22,13 +23,12 @@ public class boss
                 player1.health -= 5;
             }
         }
-        
     }
     List<int> bossStats = new List<int>();
     public void declareStats()
     {
-        bossStats.Add(boss.health);
-        bossStats.Add(this.power);
+        bossStats.Add(ba.health);
+        bossStats.Add(ba.power);
     }
     
 }
