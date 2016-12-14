@@ -16,10 +16,18 @@ public class Player
     int potionCount = 1;
     int elixirCount = 1;
     int goldCOunt = 100;
-    int subtractArmor (power)
+    public int subtractArmor (power)
     {
         this.armor -= power;
         return Player.armor;
+    }
+    foreach (string item in items)
+    {
+        Console.WriteLine("{0} ", item);
+    }
+    foreach (string mt in magicType)
+    {
+        Console.WriteLine("{0} ", mt);
     }
     List<string> playerStats = new List<string>();
     playerStats.add(Player.health);

@@ -14,7 +14,13 @@ public class boss
 
     public int bossAttack ()
     {
-
+        for (int i = 0; i < 5; i++)
+        {
+            while (i < 5)
+            {
+                Player.health -= 5;
+            }
+        }
     }
     List<object> bossStats = new List<object>();
     bossStats.add(boss.health);

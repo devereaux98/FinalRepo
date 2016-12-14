@@ -17,7 +17,7 @@ public class fireEnemy
 
     public int FireAttack (int power)
     {
-        Player.armor -= power;
+        Player.subtractArmor();
         if (Player.armor == 0)
         {
             Player.health -= power;
