@@ -8,13 +8,25 @@ using System.Collections.Generic;
 public class GameScript
 {
     public bool Game = true;
-    void adventureStart ()
+    public static void adventureStart ()
     {
         System.Console.WriteLine(" Welcome stranger!  Our wonderful town of Codeville is being rampaged by corrupted and incorrect javascript files!  You must help us! ");
         Player.name = System.Console.ReadLine(" What is your name, stranger? ");
     }
-    adventureStart();
-    void itemGet ()
+    static void reponses()
+    {
+        switch (Player.name)
+        {
+            case "Dev":
+                Console.WriteLine("What have you gotten yourself into?");
+                break;
+            case "Anthony":
+                Console.WriteLine("Go easy on me");
+                break;
+        }
+    }
+    
+    public static void itemGet ()
     {
         System.Console.WriteLine(" Thank you for helping us, " + Player.name + ".  Here are some supplies to help you on your journey. ");
         System.Console.WriteLine(" *Obtained " + Player.armor + " Armor*");
@@ -23,8 +35,7 @@ public class GameScript
         System.Console.WriteLine(" *Obtained " + Player.potionCount + " Potion(s)*");
         System.Console.WriteLine(" *Obtained " + Player.elixirCount + " Elixir(s)*");
     }
-    itemGet();
-    void instructionFunction ()
+    public static void instructionFunction()
     {
         System.Console.WriteLine(" When you engage in a Battle with one of the bad codes, you will have a number of options of what to do. ");
         System.Console.WriteLine(" The first choice is to Attack.  Use this to engage with your enemie and deal damage using your enemies and deal damage using your magic. ");
@@ -35,7 +46,7 @@ public class GameScript
         System.Console.WriteLine(" The supplies I gave you will not last forever, however.  Luckily on your quest there will be some shops in which you can buy more things using Gold. ");
         System.Console.WriteLine(" Good luck, " + Player.name + ". ");
     }
-    void instruction ()
+    public static void instruction()
     {
         String instructions = Console.ReadLine(" Would you like to know how to play? ");
         if (instructions == 'yes' || 'Yes' || 'YES')
@@ -47,5 +58,4 @@ public class GameScript
             System.Console.WriteLine(" Very well.  Good luck on your adventure, " + Player.name + "! ");
         }
     }
-    instruction();
 }
