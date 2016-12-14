@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 
-public class boss
+public static class boss
 {
     int health = 200;
     int power = 14;

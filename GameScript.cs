@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 
-public class GameScript
+public static class GameScript
 {
     public bool Game = true;
     public static void adventureStart ()
@@ -56,6 +56,33 @@ public class GameScript
         else
         {
             System.Console.WriteLine(" Very well.  Good luck on your adventure, " + Player.name + "! ");
+        }
+    }
+    static void EnemyAppear()
+    {
+        switch (enemyType)
+        {
+            case "fire":
+                Console.WriteLine("A fire enemy has appeared!");
+                break;
+            case "water":
+                Console.WriteLine("A water enemy has appeared!");
+                break;
+            case "grass":
+                Console.WriteLine("A grass enemy has appeared!");
+                break;
+        }
+    }
+    static void GameOver()
+    {
+        switch (Game)
+        {
+            case true:
+                Console.WriteLine("Game is continuing");
+                break;
+            case false:
+                Console.WriteLine("Game Over");
+                break;
         }
     }
 }

@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 
-public class Player
+public static class Player
 {
     public String name;
     int health = 100;

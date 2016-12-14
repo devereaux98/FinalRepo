@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 
-public class grassEnemy
+public static class grassEnemy
 {
     int health = 60;
     int power = 10;
