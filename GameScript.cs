@@ -49,13 +49,24 @@ public static class GameScript
     public static void instruction()
     {
         String instructions = Console.ReadLine(" Would you like to know how to play? ");
-        if (instructions == 'yes' || 'Yes' || 'YES')
+        switch (instructions)
         {
-            instructionFunction();
+            case "yes":
+                instructionFunction();
+                break;
+            case "YES":
+                instructionFunction();
+                break;
+            case "Yes":
+                instructionFunction();
+                break;
+            default:
+                System.Console.WriteLine(" Very well.  Good luck on your adventure, " + Player.name + "! ");
+                break;
         }
         else
         {
-            System.Console.WriteLine(" Very well.  Good luck on your adventure, " + Player.name + "! ");
+            
         }
     }
     static void EnemyAppear()

@@ -19,7 +19,7 @@ public static class Player
     public int subtractArmor (power)
     {
         this.armor -= power;
-        return Player.armor;
+        return this.armor;
     }
     foreach (string item in items)
     {
@@ -30,10 +30,10 @@ public static class Player
         Console.WriteLine("{0} ", mt);
     }
     List<string> playerStats = new List<string>();
-    playerStats.add(Player.health);
-    playerStats.add(Player.armor);
-    playerStats.add(Player.magic);
-    while (Player.health > 0)
+    playerStats.add(this.health);
+    playerStats.add(this.armor);
+    playerStats.add(this.magic);
+    while (this.health > 0)
     {
         Game = true;
     }

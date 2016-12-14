@@ -20,6 +20,10 @@ public static class waterEnemy
             Player.health -= power;
             return Player.health;
         }
+        else
+        {
+            Console.WriteLine("No damage taken!");
+        }
     }
 
     public int waterTakeDamage ()
