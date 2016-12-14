@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public static class GameScript
 {
-    public bool Game = true;
+    public static bool Game = true;
     public static void adventureStart ()
     {
         System.Console.WriteLine(" Welcome stranger!  Our wonderful town of Codeville is being rampaged by corrupted and incorrect javascript files!  You must help us! ");
