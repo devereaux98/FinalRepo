@@ -2,9 +2,7 @@
 //Anthony Romrell
 //C-Sharp Final
 
-using System;
 using System.Collections.Generic;
-using System.Collections;
 
 public class boss
 {

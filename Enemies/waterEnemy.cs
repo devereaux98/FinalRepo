@@ -4,39 +4,49 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections;
 
-public static class waterEnemy
+public class waterEnemy
 {
-    int health = 50;
-    int power = 9;
-    string status = ("alive");
-    String enemyType = ("Water");
+    public PlayerScript player1 = new PlayerScript();
+    public waterEnemy we = new waterEnemy();
+    public int health = 50;
+    public int power = 9;
+    public string status = "alive";
+    public string enemyType = "Water";
 
     public int waterAttack (int power)
     {
-        Player.armor -= power;
-        if (Player.armor == 0)
+        player1.armor -= power;
+        if (player1.armor == 0)
         {
-            Player.health -= power;
-            return Player.health;
+            player1.health -= power;
+            return player1.health;
         }
         else
         {
             Console.WriteLine("No damage taken!");
+            return player1.health;
         }
     }
 
     public int waterTakeDamage ()
     {
-        this.health -= 10;
-        return waterEnemy.health;
+        we.health -= 10;
+        return we.health;
     }
-    while (waterEnemy.health <= 0)
+    public string lifeStatus(string status)
     {
-        status = ("dead");
+        while (we.health <= 0)
+        {
+            status = ("dead");
+        }
+        return status;
     }
-    List<string> waterStats = new List<string>();
-    waterStats.add(waterEnemy.health);
-    waterStats.add(waterEnemy.power);
+    List<int> waterStats = new List<int>();
+    public void declareStats()
+    {
+        waterStats.Add(we.health);
+        waterStats.Add(we.power);
+    }
+    
 }

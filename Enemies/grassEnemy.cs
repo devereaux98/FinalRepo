@@ -4,10 +4,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections;
 
 public class grassEnemy
 {
+    public PlayerScript player1 = new PlayerScript();
+    public grassEnemy ge = new grassEnemy();
     public int health = 60;
     public int power = 10;
     public string status = "alive";
@@ -15,33 +16,39 @@ public class grassEnemy
 
     public int grassAttack (int power)
     {
-        Player.armor -= power;
-        if (Player.armor == 0)
+        player1.armor -= power;
+        if (player1.armor == 0)
         {
-            Player.health -= power;
-            return Player.health;
+            player1.health -= power;
+            return player1.health;
         }
         else
         {
             Console.WriteLine("No damage taken!");
+            return player1.health;
         }
         
     }
 
     public int grassTakeDamage ()
     {
-        this.health -= 10;
-        return grassEnemy.health;
+        ge.health -= 10;
+        return ge.health;
     }
-    while (grassEnemy.health <= 0)
+    public string lifeStatus()
     {
-        status = ("dead");
+        while (ge.health <= 0)
+        {
+            status = ("dead");
+        }
+        return status;
     }
-    List<string> grassStats = new List<string>();
+    
+    List<int> grassStats = new List<int>();
     public void declareStats()
     {
-        grassStats.Add(grassEnemy.health);
-        grassStats.Add(grassEnemy.power);
+        grassStats.Add(ge.health);
+        grassStats.Add(ge.power);
     }
     
 }

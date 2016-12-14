@@ -3,8 +3,6 @@
 //C-Sharp Final
 
 using System;
-using System.Collections.Generic;
-using System.Collections;
 
 public class GameScript
 {
