@@ -9,6 +9,7 @@ public class grassEnemy
 {
     int health = 60;
     int power = 10;
+    string status = ("alive");
     String enemyType = ("Grass");
 
     public int grassAttack (int power)
@@ -26,6 +27,10 @@ public class grassEnemy
     {
         this.health -= 10;
         return grassEnemy.health;
+    }
+    while (grassEnemy.health <= 0)
+    {
+        status = ("dead");
     }
     List<string> grassStats = new List<string>();
     grassStats.add(grassEnemy.health);

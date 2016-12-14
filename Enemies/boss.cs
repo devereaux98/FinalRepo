@@ -9,7 +9,8 @@ public class boss
 {
     int health = 200;
     int power = 14;
-    String enemyType = ("All");
+    string status = ("alive");
+    String bossName = ("Anthony Romrell");
 
     public int bossAttack ()
     {

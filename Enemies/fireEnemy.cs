@@ -10,6 +10,8 @@ public class fireEnemy
     int health = 50;
 
     int power = 10;
+
+    string status = ("alive");
     
     String enemyType = ("Fire");
 
@@ -27,6 +29,10 @@ public class fireEnemy
     {
         this.health -= 10;
         return fireEnemy.health;
+    }
+    while (fireEnemy.health <= 0)
+    {
+        status = ("dead");
     }
     List<string> fireStats = new List<string>();
     fireStats.add(fireEnemy.health);
