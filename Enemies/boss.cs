@@ -4,25 +4,33 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
-public static class boss
+public class boss
 {
-    int health = 200;
-    int power = 14;
-    string status = ("alive");
-    String bossName = ("Anthony Romrell");
+    public boss ba = new boss();
+    public int health = 200;
+    public int power = 14;
+    public string status = ("alive");
+    public string bossName = ("Anthony Romrell");
 
-    public int bossAttack ()
+    public void bossAttack ()
     {
+        public PlayerScript player1 = new PlayerScript();
         for (int i = 0; i < 5; i++)
         {
             while (i < 5)
             {
-                Player.health -= 5;
+                player1.health -= 5;
             }
         }
+        
     }
-    List<object> bossStats = new List<object>();
-    bossStats.add(boss.health);
-    bossStats.add(boss.power);
+    List<int> bossStats = new List<int>();
+    public void declareStats()
+    {
+        bossStats.Add(boss.health);
+        bossStats.Add(this.power);
+    }
+    
 }

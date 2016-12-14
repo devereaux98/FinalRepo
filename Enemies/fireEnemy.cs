@@ -4,41 +4,54 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
-public static class fireEnemy
+public class fireEnemy
 {
-    int health = 50;
+    public PlayerScript player1 = new PlayerScript();
+    public int health = 50;
 
-    int power = 10;
+    public int power = 10;
 
-    string status = ("alive");
+    public string status = "alive";
     
-    String enemyType = ("Fire");
+    public string enemyType = "Fire";
 
     public int FireAttack (int power)
     {
-        Player.subtractArmor();
-        if (Player.armor == 0)
+        player1.subtractArmor(power);
+        if (player1.armor == 0)
         {
-            Player.health -= power;
-            return Player.health;
+            player1.health -= power;
+            return player1.health;
         }
         else
         {
             Console.WriteLine("No damage taken!");
+            return player1.health;
         }
     }
-
+    public fireEnemy fe = new fireEnemy();
     public int FireTakeDamage ()
     {
         this.health -= 10;
-        return fireEnemy.health;
+        return fe.health;
     }
-    while (fireEnemy.health <= 0)
+    public string lifeStatus(string status)
     {
-        status = ("dead");
+        while (fe.health <= 0)
+        {
+            fe.status = "dead";
+            
+        }
+        return status;
     }
-    List<string> fireStats = new List<string>();
-    fireStats.add(fireEnemy.health);
-    fireStats.add(fireEnemy.power);
+    
+    List<int> fireStats = new List<int>();
+    public void declareStats()
+    {
+        fireStats.Add(fe.health);
+        fireStats.Add(fe.power);
+    }
+    
 }

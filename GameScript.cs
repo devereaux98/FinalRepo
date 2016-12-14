@@ -4,18 +4,21 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
-public static class GameScript
+public class GameScript
 {
-    public static bool Game = true;
-    public static void adventureStart ()
+    public PlayerScript player1 = new PlayerScript();
+    public bool Game = true;
+    public void adventureStart ()
     {
         System.Console.WriteLine(" Welcome stranger!  Our wonderful town of Codeville is being rampaged by corrupted and incorrect javascript files!  You must help us! ");
-        Player.name = System.Console.ReadLine(" What is your name, stranger? ");
+        System.Console.WriteLine("What is your name stranger?");
+        player1.name = System.Console.ReadLine(); 
     }
-    static void reponses()
+    void reponses()
     {
-        switch (Player.name)
+        switch (player1.name)
         {
             case "Dev":
                 Console.WriteLine("What have you gotten yourself into?");
@@ -26,16 +29,16 @@ public static class GameScript
         }
     }
     
-    public static void itemGet ()
+    public void itemGet ()
     {
-        System.Console.WriteLine(" Thank you for helping us, " + Player.name + ".  Here are some supplies to help you on your journey. ");
-        System.Console.WriteLine(" *Obtained " + Player.armor + " Armor*");
-        System.Console.WriteLine(" *Obtained " + Player.magic + " Magic*");
-        System.Console.WriteLine(" *Obtained " + Player.goldCount + " Gold*");
-        System.Console.WriteLine(" *Obtained " + Player.potionCount + " Potion(s)*");
-        System.Console.WriteLine(" *Obtained " + Player.elixirCount + " Elixir(s)*");
+        System.Console.WriteLine(" Thank you for helping us, " + player1.name + ".  Here are some supplies to help you on your journey. ");
+        System.Console.WriteLine(" *Obtained " + player1.armor + " Armor*");
+        System.Console.WriteLine(" *Obtained " + player1.magic + " Magic*");
+        System.Console.WriteLine(" *Obtained " + player1.goldCount + " Gold*");
+        System.Console.WriteLine(" *Obtained " + player1.potionCount + " Potion(s)*");
+        System.Console.WriteLine(" *Obtained " + player1.elixirCount + " Elixir(s)*");
     }
-    public static void instructionFunction()
+    public void instructionFunction()
     {
         System.Console.WriteLine(" When you engage in a Battle with one of the bad codes, you will have a number of options of what to do. ");
         System.Console.WriteLine(" The first choice is to Attack.  Use this to engage with your enemie and deal damage using your enemies and deal damage using your magic. ");
@@ -44,11 +47,12 @@ public static class GameScript
         System.Console.WriteLine(" You only have so much Magic, however.  So when you begin to run low, use an Elixir, by choosing Items. ");
         System.Console.WriteLine(" When you slay a code monster, they will drop loot, which can vary from Gold to more supplies. ");
         System.Console.WriteLine(" The supplies I gave you will not last forever, however.  Luckily on your quest there will be some shops in which you can buy more things using Gold. ");
-        System.Console.WriteLine(" Good luck, " + Player.name + ". ");
+        System.Console.WriteLine(" Good luck, " + player1.name + ". ");
     }
-    public static void instruction()
+    public void instruction()
     {
-        String instructions = Console.ReadLine(" Would you like to know how to play? ");
+        System.Console.WriteLine(" Would you like to know how to play? ");
+        String instructions = System.Console.ReadLine();
         switch (instructions)
         {
             case "yes":
@@ -64,35 +68,36 @@ public static class GameScript
                 System.Console.WriteLine(" Very well.  Good luck on your adventure, " + Player.name + "! ");
                 break;
         }
-        else
-        {
-            
-        }
+        
     }
-    static void EnemyAppear()
+    public fireEnemy fe = new fireEnemy();
+    void EnemyAppear()
     {
-        switch (enemyType)
+        
+        switch (fe.enemyType)
         {
             case "fire":
-                Console.WriteLine("A fire enemy has appeared!");
+                System.Console.WriteLine("A fire enemy has appeared!");
                 break;
             case "water":
-                Console.WriteLine("A water enemy has appeared!");
+                System.Console.WriteLine("A water enemy has appeared!");
                 break;
             case "grass":
-                Console.WriteLine("A grass enemy has appeared!");
+                System.Console.WriteLine("A grass enemy has appeared!");
                 break;
         }
     }
-    static void GameOver()
+    public GameScript gs = new GameScript();
+    void GameOver()
     {
-        switch (Game)
+        
+        switch (gs.Game)
         {
             case true:
-                Console.WriteLine("Game is continuing");
+                System.Console.WriteLine("Game is continuing");
                 break;
             case false:
-                Console.WriteLine("Game Over");
+                System.Console.WriteLine("Game Over");
                 break;
         }
     }

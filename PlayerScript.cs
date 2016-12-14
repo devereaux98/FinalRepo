@@ -2,39 +2,49 @@
 //Anthony Romrell
 //C-Sharp Final
 
-using System;
 using System.Collections.Generic;
 
-public static class Player
+public class PlayerScript
 {
-    public String name;
-    int health = 100;
-    int armor = 100;
-    int magic = 50;
-    string[] magicType = {"fire", "water", "grass"};
-    string[] items = {"potion", "elixir", "gold", "armor"};
-    int potionCount = 1;
-    int elixirCount = 1;
-    int goldCOunt = 100;
-    public int subtractArmor (power)
+    public GameScript gs = new GameScript();
+    public string name; 
+    public int health = 100;
+    public int armor = 100;
+    public int magic = 50;
+    public string[] magicType = {"fire", "water", "grass"};
+    public string[] items = {"potion", "elixir", "gold", "armor"};
+    public int potionCount = 1;
+    public int elixirCount = 1;
+    public int goldCount = 100;
+    public fireEnemy fe = new fireEnemy();
+    public int subtractArmor (int power)
     {
-        this.armor -= power;
-        return this.armor;
+        armor -= power;
+        return armor;
     }
-    foreach (string item in items)
+    public string[] declareArray()
     {
-        Console.WriteLine("{0} ", item);
+        foreach (string item in items)
+        {
+            System.Console.WriteLine("{0} ", item);
+        }
+        foreach (string mt in magicType)
+        {
+            System.Console.WriteLine("{0} ", mt);
+        }
+        return items;
     }
-    foreach (string mt in magicType)
+    
+    List<int> playerStats = new List<int>();
+    public void declareStats()
     {
-        Console.WriteLine("{0} ", mt);
+        playerStats.Add(this.health);
+        playerStats.Add(this.armor);
+        playerStats.Add(this.magic);
+        while (this.health > 0)
+        {
+            gs.Game = true;
+        }
     }
-    List<string> playerStats = new List<string>();
-    playerStats.add(this.health);
-    playerStats.add(this.armor);
-    playerStats.add(this.magic);
-    while (this.health > 0)
-    {
-        Game = true;
-    }
+    
 }

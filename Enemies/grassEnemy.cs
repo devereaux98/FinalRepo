@@ -4,13 +4,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
-public static class grassEnemy
+public class grassEnemy
 {
-    int health = 60;
-    int power = 10;
-    string status = ("alive");
-    String enemyType = ("Grass");
+    public int health = 60;
+    public int power = 10;
+    public string status = "alive";
+    public string enemyType = "Grass";
 
     public int grassAttack (int power)
     {
@@ -37,6 +38,10 @@ public static class grassEnemy
         status = ("dead");
     }
     List<string> grassStats = new List<string>();
-    grassStats.add(grassEnemy.health);
-    grassStats.add(grassEnemy.power);
+    public void declareStats()
+    {
+        grassStats.Add(grassEnemy.health);
+        grassStats.Add(grassEnemy.power);
+    }
+    
 }
